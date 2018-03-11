@@ -280,6 +280,7 @@ int main(int argc, char **argv)
   if (!strncmp(argv[1], "-p", 2)) {
     if (argc != 4) {
       printf("-p ENTRIES COUNT\n");
+      return 1;
     }
     return perf_loop(atoi(argv[2]), atoi(argv[3]));
   }
